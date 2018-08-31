@@ -9,8 +9,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.aula.demo.domain.Categoria;
 import com.aula.demo.domain.Cidade;
+import com.aula.demo.domain.Cliente;
 import com.aula.demo.domain.Estado;
 import com.aula.demo.domain.Produto;
+import com.aula.demo.domain.enums.TipoCliente;
 import com.aula.demo.repositories.CategoriaRepository;
 import com.aula.demo.repositories.CidadeRepository;
 import com.aula.demo.repositories.EstadoRepository;
@@ -72,5 +74,9 @@ private CidadeRepository cidadeRepository;
 		estadoRepository.saveAll(Arrays.asList(est1, est2));
 		cidadeRepository.saveAll(Arrays.asList(c1,c2,c3));
 		
+		Cliente cli1 = new Cliente(null,"Maria Silva", "maria@gmail.com", "11111111",TipoCliente.PESSOAFISICA);
+		cli1.getTelefones().addAll(Arrays.asList("11111111","22222222"));
+		
+		Endereco e1 = new Endereco(null,"Rua Flores","300","Apto 303", "Jardim","38220834", cliente, cidade);
 	}
 }
