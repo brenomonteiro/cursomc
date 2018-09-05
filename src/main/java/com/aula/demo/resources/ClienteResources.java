@@ -14,7 +14,7 @@ import com.aula.demo.domain.Cliente;
 import com.aula.demo.services.ClienteService;
 
 @RestController
-@RequestMapping(value="/categorias")
+@RequestMapping(value="/clientes")
 public class ClienteResources {
 	
 	@Autowired
