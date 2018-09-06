@@ -6,6 +6,8 @@ import javax.persistence.Embeddable;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Embeddable
 public class ItemPedidoPK implements Serializable{
 	
@@ -18,9 +20,13 @@ public class ItemPedidoPK implements Serializable{
 	@ManyToOne
 	@JoinColumn(name="produto_id")
 	private Produto produto;
+	
+
 	public Pedido getPedido() {
 		return pedido;
 	}
+	
+
 	public void setPedido(Pedido pedido) {
 		this.pedido = pedido;
 	}
