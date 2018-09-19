@@ -45,7 +45,7 @@ if(objDto.getTipo().equals(TipoCliente.PESSOAJURIDICA.getCod()) && !BR.isValidCn
 Cliente aux = repo.findByEmail(objDto.getEmail());
 if(aux != null) {
 	
-	list.add(new FieldMessage("email","email já existented"));
+	list.add(new FieldMessage("email","email já existente"));
 }
 		// inclua os testes aqui, inserindo erros na lista
 		for (FieldMessage e : list) {

@@ -8,6 +8,11 @@ import javax.validation.constraints.NotEmpty;
 import org.hibernate.validator.constraints.Length;
 
 import com.aula.demo.domain.Cliente;
+import com.aula.demo.services.validation.ClienteUpdate;
+
+
+
+@ClienteUpdate
 public class ClienteDTO implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
